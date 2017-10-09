@@ -13,6 +13,7 @@
 		ECA7FD191F8BBEC20050D1CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA7FD171F8BBEC20050D1CD /* Main.storyboard */; };
 		ECA7FD1B1F8BBEC20050D1CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA7FD1A1F8BBEC20050D1CD /* Assets.xcassets */; };
 		ECA7FD1E1F8BBEC20050D1CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA7FD1C1F8BBEC20050D1CD /* LaunchScreen.storyboard */; };
+		ECBF8B011F8BCDA900BE81CF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECBF8B001F8BCDA900BE81CF /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,10 @@
 		ECA7FD1A1F8BBEC20050D1CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECA7FD1D1F8BBEC20050D1CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECA7FD1F1F8BBEC20050D1CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECBF8AFE1F8BCD6700BE81CF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		ECBF8B001F8BCDA900BE81CF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		ECBF8B021F8BCE0400BE81CF /* CTHDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHDefinition.h; sourceTree = "<group>"; };
+		ECBF8B031F8BCE1500BE81CF /* CTHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTHMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBF8B011F8BCDA900BE81CF /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,7 @@
 			children = (
 				ECA7FD0D1F8BBEC20050D1CD /* CangTeacher */,
 				ECA7FD0C1F8BBEC20050D1CD /* Products */,
+				ECBF8AFF1F8BCDA900BE81CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +82,19 @@
 			isa = PBXGroup;
 			children = (
 				ECA7FD0F1F8BBEC20050D1CD /* main.m */,
+				ECBF8AFE1F8BCD6700BE81CF /* PrefixHeader.pch */,
+				ECBF8B021F8BCE0400BE81CF /* CTHDefinition.h */,
+				ECBF8B031F8BCE1500BE81CF /* CTHMacros.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECBF8AFF1F8BCDA900BE81CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ECBF8B001F8BCDA900BE81CF /* CoreText.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +294,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UG6PG8B3H6;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CangTeacher/PrefixHeader.pch";
 				INFOPLIST_FILE = CangTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Joe.CangTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,7 +308,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UG6PG8B3H6;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CangTeacher/PrefixHeader.pch";
 				INFOPLIST_FILE = CangTeacher/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Joe.CangTeacher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -314,6 +336,7 @@
 				ECA7FD241F8BBEC20050D1CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

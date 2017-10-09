@@ -8,7 +8,11 @@
 
 #import "ViewController.h"
 
+
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UINavigationItem *naviItemMain;
+@property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentMain;
 
 @end
 
@@ -17,6 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.naviItemMain.leftBarButtonItem.tintColor = [UIColor purpleColor];
+    self.naviItemMain.rightBarButtonItem.tintColor = [UIColor purpleColor];
+    self.view.backgroundColor = CTHTINTCOLOR4;
+    self.startButton.titleLabel.textColor = [UIColor purpleColor];
+    self.segmentMain.tintColor = [UIColor purpleColor];
 }
 
 
