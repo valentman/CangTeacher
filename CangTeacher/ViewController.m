@@ -23,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.naviItemMain.leftBarButtonItem.tintColor = [UIColor purpleColor];
     self.naviItemMain.rightBarButtonItem.tintColor = [UIColor purpleColor];
-    self.view.backgroundColor = CTHTINTCOLOR4;
+    self.view.backgroundColor = CTHPINKCOLOR;
     self.startButton.titleLabel.textColor = [UIColor purpleColor];
     self.segmentMain.tintColor = [UIColor purpleColor];
 }

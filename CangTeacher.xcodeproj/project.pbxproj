@@ -128,7 +128,7 @@
 				TargetAttributes = {
 					ECA7FD0A1F8BBEC20050D1CD = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = UG6PG8B3H6;
+						DevelopmentTeam = 4H7VQ8HPF3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -293,7 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG6PG8B3H6;
+				DEVELOPMENT_TEAM = 4H7VQ8HPF3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CangTeacher/PrefixHeader.pch";
 				INFOPLIST_FILE = CangTeacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -307,7 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UG6PG8B3H6;
+				DEVELOPMENT_TEAM = 4H7VQ8HPF3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CangTeacher/PrefixHeader.pch";
 				INFOPLIST_FILE = CangTeacher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
