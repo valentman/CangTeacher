@@ -7,13 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "JTCalendar.h"
 
-
-@interface ViewController ()
+@interface ViewController ()<JTCalendarDelegate>
 @property (weak, nonatomic) IBOutlet UINavigationItem *naviItemMain;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentMain;
+@property (weak, nonatomic) IBOutlet JTHorizontalCalendarView *calendarView;
+@property (weak, nonatomic) IBOutlet JTCalendarMenuView *menuView;
 
+@property (strong, nonatomic) JTCalendarManager *JTManager;
 @end
 
 @implementation ViewController
@@ -26,7 +29,15 @@
     self.view.backgroundColor = CTHPINKCOLOR;
     self.startButton.titleLabel.textColor = [UIColor purpleColor];
     self.segmentMain.tintColor = [UIColor purpleColor];
+    
+    _JTManager = [JTCalendarManager new];
+    _JTManager.delegate = self;
+    [_JTManager setContentView:_calendarView];
+    [_JTManager setMenuView:_menuView];
+    [_JTManager setDate:[NSDate date]];
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {

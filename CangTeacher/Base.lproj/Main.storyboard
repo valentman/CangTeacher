@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lf7-vS-b56">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lf7-vS-b56">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,13 +46,33 @@
                                     <segue destination="KyQ-cx-2ai" kind="show" id="vJp-ey-Xei"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kao-he-f6o" customClass="JTHorizontalCalendarView">
+                                <rect key="frame" x="0.0" y="144" width="375" height="155"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="dEj-6r-0WE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2K6-AA-E86" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="qtZ-Wu-D7l"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.51279885056568042" blue="0.91049801784172002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bxn-cf-sR5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="9iM-Nx-nvG"/>
+                            <constraint firstItem="kao-he-f6o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="F7E-2U-HcX"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W4o-Qh-W3d" secondAttribute="bottom" constant="20" id="Lwh-H4-l9t"/>
+                            <constraint firstAttribute="trailing" secondItem="2K6-AA-E86" secondAttribute="trailing" id="PTI-eJ-DxZ"/>
                             <constraint firstAttribute="trailing" secondItem="W4o-Qh-W3d" secondAttribute="trailing" constant="20" id="XL8-7Y-vzM"/>
+                            <constraint firstItem="2K6-AA-E86" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="dcO-1m-1n9"/>
+                            <constraint firstAttribute="trailing" secondItem="kao-he-f6o" secondAttribute="trailing" id="f5E-Ft-dXf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bxn-cf-sR5" secondAttribute="bottom" constant="20" id="ksK-Av-qh2"/>
+                            <constraint firstItem="kao-he-f6o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p6R-eC-fdg"/>
+                            <constraint firstItem="2K6-AA-E86" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tZz-yU-Mm8"/>
                             <constraint firstItem="W4o-Qh-W3d" firstAttribute="leading" secondItem="bxn-cf-sR5" secondAttribute="trailing" constant="20" id="yoz-Il-CDL"/>
                         </constraints>
                     </view>
@@ -81,6 +101,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="calendarView" destination="kao-he-f6o" id="N6t-hY-JEB"/>
+                        <outlet property="menuView" destination="2K6-AA-E86" id="f9G-z0-Yr3"/>
                         <outlet property="naviItemMain" destination="FLt-fT-VB7" id="c29-oO-4bM"/>
                         <outlet property="segmentMain" destination="QoX-qH-RTL" id="Oa2-uU-KNn"/>
                         <outlet property="startButton" destination="W4o-Qh-W3d" id="fer-EL-ww1"/>
