@@ -35,9 +35,11 @@
     [_JTManager setContentView:_calendarView];
     [_JTManager setMenuView:_menuView];
     [_JTManager setDate:[NSDate date]];
+    _JTManager.settings.weekModeEnabled = !_JTManager.settings.weekModeEnabled;
+    [_JTManager reload];
+    
+    NSUInteger weekNo = [_JTManager.dateHelper numberOfWeeks:[NSDate date]];
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {

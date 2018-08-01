@@ -46,10 +46,29 @@
     
     // Create a min and max date for limit the calendar, optional
     [self createMinAndMaxDate];
+
+    
+    _todayDate = [[NSDate date] dateByAddingTimeInterval:28800];
+    NSDate *yesteday = [NSDate dateWithTimeIntervalSinceNow:-16*60*60];
+    NSDate *yesteday1 = [NSDate dateWithTimeInterval:-24*60*60 sinceDate:_todayDate];
+    NSDate *tommorow = [NSDate dateWithTimeInterval:24*60*60 sinceDate:_todayDate];
+    NSDate *tommorow1 = [NSDate dateWithTimeIntervalSinceNow:32*60*60];
+    NSTimeInterval interval1 = [tommorow timeIntervalSinceDate:yesteday];
+    NSTimeInterval interval2 = [_todayDate timeIntervalSince1970];
+    NSTimeInterval interval3 = [tommorow timeIntervalSinceNow];
+    NSDate *date = [NSDate date];
+    NSLog(@"当前时间:%@",date);
+    NSLog(@"nowdate:%@",date);
+
+    NSTimeZone *zone = [NSTimeZone localTimeZone];
+    NSInteger interval = [zone secondsFromGMTForDate: date];
+    _todayDate = [date  dateByAddingTimeInterval: interval];
+    
     
     [_calendarManager setMenuView:_calendarMenuView];
     [_calendarManager setContentView:_calendarContentView];
     [_calendarManager setDate:_todayDate];
+    _calendarManager.settings.weekDayFormat = JTCalendarWeekDayFormatSingle;
 }
 
 #pragma mark - Buttons callback
@@ -117,6 +136,7 @@
 - (void)calendar:(JTCalendarManager *)calendar didTouchDayView:(JTCalendarDayView *)dayView
 {
     _dateSelected = dayView.date;
+    NSDate* touchDate = dayView.date;
     
     // Animation for the circleView
     dayView.circleView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0.1, 0.1);
@@ -169,6 +189,7 @@
 - (void)createMinAndMaxDate
 {
     _todayDate = [NSDate date];
+    
     
     // Min date will be 2 month before today
     _minDate = [_calendarManager.dateHelper addToDate:_todayDate months:-2];

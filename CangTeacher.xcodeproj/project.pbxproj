@@ -110,15 +110,15 @@
 			isa = PBXGroup;
 			children = (
 				ECA7FD111F8BBEC20050D1CD /* AppDelegate.h */,
+				ECA7FD141F8BBEC20050D1CD /* ViewController.h */,
 				ECA7FD121F8BBEC20050D1CD /* AppDelegate.m */,
-				ECA7FD1A1F8BBEC20050D1CD /* Assets.xcassets */,
+				ECA7FD151F8BBEC20050D1CD /* ViewController.m */,
 				ECA7FD1F1F8BBEC20050D1CD /* Info.plist */,
+				ECA7FD1A1F8BBEC20050D1CD /* Assets.xcassets */,
 				ECBB1E201FEBA8BE00E5B3B0 /* JTCalendar */,
 				ECA7FD1C1F8BBEC20050D1CD /* LaunchScreen.storyboard */,
 				ECA7FD171F8BBEC20050D1CD /* Main.storyboard */,
 				ECA7FD0E1F8BBEC20050D1CD /* Supporting Files */,
-				ECA7FD141F8BBEC20050D1CD /* ViewController.h */,
-				ECA7FD151F8BBEC20050D1CD /* ViewController.m */,
 			);
 			path = CangTeacher;
 			sourceTree = "<group>";

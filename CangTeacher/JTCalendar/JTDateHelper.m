@@ -73,6 +73,12 @@
     NSDateComponents *componentsA = [self.calendar components:NSCalendarUnitWeekOfYear fromDate:firstDay];
     NSDateComponents *componentsB = [self.calendar components:NSCalendarUnitWeekOfYear fromDate:lastDay];
     
+    NSDateComponents *comps = [self.calendar components:NSCalendarUnitYear|NSCalendarUnitDay|NSCalendarUnitMonth|NSCalendarUnitWeekOfYear|NSCalendarUnitWeekOfMonth fromDate:[NSDate date]];
+    NSInteger year = [comps year];
+    NSInteger month = [comps month];
+    NSInteger day = [comps day];
+    NSLog(@"year:%d month: %d, day: %d, weakDay:%d", year, month, day, [comps weekOfMonth]);
+    
     // weekOfYear may return 53 for the first week of the year
     return (componentsB.weekOfYear - componentsA.weekOfYear + 52 + 1) % 52;
 }

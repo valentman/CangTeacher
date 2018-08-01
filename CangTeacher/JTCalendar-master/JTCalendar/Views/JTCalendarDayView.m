@@ -109,7 +109,7 @@
 {
     NSAssert(date != nil, @"date cannot be nil");
     NSAssert(_manager != nil, @"manager cannot be nil");
-    
+    NSLog(@"%@", date);
     self->_date = date;
     [self reload];
 }

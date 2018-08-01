@@ -20,6 +20,26 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSCalendar *greCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    //    通过已定义的日历对象，获取某个时间点的NSDateComponents表示，并设置需要表示哪些信息（NSYearCalendarUnit, NSMonthCalendarUnit, NSDayCalendarUnit等）
+    NSDateComponents *dateComponents = [greCalendar components:NSCalendarUnitEra|NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond|NSCalendarUnitWeekday|NSCalendarUnitWeekdayOrdinal|NSCalendarUnitQuarter|NSCalendarUnitWeekOfMonth|NSCalendarUnitWeekOfYear fromDate:[NSDate date]];
+    NSLog(@"year(年份): %ld", dateComponents.year);
+    NSLog(@"quarter(季度):%ld", dateComponents.quarter);
+    NSLog(@"month(月份):%ld", dateComponents.month);
+    NSLog(@"day(日期):%ld", dateComponents.day);
+    NSLog(@"hour(小时):%ld", dateComponents.hour);
+    NSLog(@"minute(分钟):%ld", dateComponents.minute);
+    NSLog(@"second(秒):%ld", dateComponents.second);
+    
+    //    Sunday:1, Monday:2, Tuesday:3, Wednesday:4, Friday:5, Saturday:6
+    NSLog(@"weekday(星期):%ld", dateComponents.weekday);
+    
+    //    苹果官方不推荐使用week
+    NSLog(@"weekOfYear(该年第几周):%ld", dateComponents.weekOfYear);
+    NSLog(@"weekOfMonth(该月第几周):%ld", dateComponents.weekOfMonth);
+    
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     

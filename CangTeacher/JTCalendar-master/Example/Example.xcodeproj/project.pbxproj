@@ -169,6 +169,8 @@
 				TargetAttributes = {
 					AB6843DE1A06FCE2000ADE68 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = TL4R9BXB5H;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -364,11 +366,15 @@
 			baseConfigurationReference = EA29A33B12777736F86B89BA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TL4R9BXB5H;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.eivo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8950d4a6-0a54-47d5-bd1b-652188c1decc";
+				PROVISIONING_PROFILE_SPECIFIER = WildDevelopment;
 			};
 			name = Debug;
 		};
@@ -377,11 +383,15 @@
 			baseConfigurationReference = ACB1558A205302184CDC8B78 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = TL4R9BXB5H;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "fr.eivo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xwbank.calendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8950d4a6-0a54-47d5-bd1b-652188c1decc";
+				PROVISIONING_PROFILE_SPECIFIER = WildDevelopment;
 			};
 			name = Release;
 		};

@@ -64,6 +64,7 @@
     dateFormatter.timeZone = _manager.dateHelper.calendar.timeZone;
     dateFormatter.locale = _manager.dateHelper.calendar.locale;
     
+    
     switch(_manager.settings.weekDayFormat) {
         case JTCalendarWeekDayFormatSingle:
             days = [[dateFormatter veryShortStandaloneWeekdaySymbols] mutableCopy];
@@ -84,6 +85,7 @@
     // Redorder days for be conform to calendar
     {
         NSCalendar *calendar = [_manager.dateHelper calendar];
+        NSUInteger firstDay  = calendar.firstWeekday;
         NSUInteger firstWeekday = (calendar.firstWeekday + 6) % 7; // Sunday == 1, Saturday == 7
         
         for(int i = 0; i < firstWeekday; ++i){
